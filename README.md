@@ -1,5 +1,6 @@
 # maxguywinter-UNITED-KINGDOM-UNEMPLOYMENT-STATISTICS-FEMALE-UNEMPLOYENT
-INTRODUCTION
+
+# INTRODUCTION
 
 This report provides statistics and analysis on United Kingdom (UK) female unemployment. The first aim of this report is to examine whether there was a difference between the proportion of unemployed females in 2019 and 2020 utilising the two datasets from the Office for National Statistics (ONS):
 
@@ -13,7 +14,7 @@ This report uses the datasets as they are the most recent data (released October
 
 Section 1.0 of this report illustrates descriptive statistics, graphical summaries and interrogates the ONS data sets above. Section 2.0 utilises hypothesis test (proportion test) to test if there is a difference between the proportion of unemployed females in 2019 and the proportion of unemployed females in 2020 and if Covid-19 impacted female unemployment more than male unemployment. Ultimately, Section 3.0 explains the results from the statistical tests from the previous section. This report concludes that the proportion of unemployed females in 2019 is not equal to the proportion of unemployed females in 2020. Moreover, the proportion of unemployed females in 2020 is less than the proportion of unemployed males in 2020. Hence, Covid-19 did not disproportionally increase female unemployment compared to male unemployment.
 
-SECTION 1.0 DESCRIPTIVE STATISTICS AND GRAPHICAL SUMMARIES
+# SECTION 1.0 DESCRIPTIVE STATISTICS AND GRAPHICAL SUMMARIES
 
 As stated above, section 1.0 shows descriptive statistics, graphical summaries and interrogates the ONS Female and Male Unemployment rate (age 16 and over, seasonally adjusted) datasets. Firstly, section 1.0 examines Figure 1, Figure 2, and Table 1, showing the trend of unemployment rates for females and males from 1971 to 2020, further discussed below. Secondly, focusing on the two years (2019 and 2020), Figure 3 and Table 2 provide quartile data on the female and male unemployment rates. Tables 1 and 2 figures have been rounded to two decimal places for the analysis.  
 
@@ -42,7 +43,7 @@ Akin to Table1, Table 2 displays the mean and median. Male unemployment rates ha
 
 The following section below employs proportion tests to assess the hypothesis of a difference between the proportion of unemployed females in 2019 and the proportion of unemployed females in 2020 and if Covid-19 increased female unemployment more than male unemployment.
 
-SECTION 2.0 STATISTICAL METHODS
+# SECTION 2.0 STATISTICAL METHODS
 
 Section 2.0 uses a proportion test to firstly test if there is a difference between the proportion of unemployed females in 2019 and the proportion of unemployed females in 2020. Therefore, the first hypothesis tests null (H0) and alternative hypothesis (HA) are:
 
@@ -66,7 +67,7 @@ However, according to John Verzani (2014), the first proportion test should be t
 
 The following section below displays the results of the proportion tests and concludes from these results.
 
-SECTION 3.0 RESULTS AND CONCLUSIONS
+# SECTION 3.0 RESULTS AND CONCLUSIONS
 
 Proportion Test: Proportion of unemployed females in 2019 and the proportion of unemployed females in 2020
 <img width="409" alt="image" src="https://user-images.githubusercontent.com/97530878/153605299-38aeacbc-61c5-4100-8d6b-66a3f92db1f9.png">
@@ -80,7 +81,7 @@ Proportion Test: The proportion of unemployed females in 2020 is greater than th
 
 Likewise, the second proportion test gives a p-value of < 2.2e-16, which is less than significance level alpha = 0.05. Therefore, there is strong evidence to reject the null hypothesis that the proportion of unemployed females in 2020 is greater than the proportion of unemployed males in 2020. Hence, it can be concluded that the alternative hypothesis is true (the proportion of unemployed females in 2020 is less than the proportion of unemployed males in 2020). Moreover, this result had been anticipated as section 1.0 exhibits the female unemployment rate (4.3%), and number (695,000) in 2020 was lower than the male unemployment rate (4.8%) and number (855,000). Additionally, the female unemployment rate and number increase from 2019 to 2020 was lower than the male figures. Thus, it can be contended that Covid-19 did not increase unemployment more for females than males.
 
-SECTION 4.0 R APPENDIX AND ADDTIONALL FILES
+# SECTION 4.0 R APPENDIX AND ADDTIONALL FILES
 
 Section 4.0 is an appendix of the R code used to create the graphs and hypothesis tests for the report and is annotated to communicate what the commands do.
 
@@ -140,7 +141,7 @@ Code for hypothesis tests:
 > prop.test(x=c(585000,695000),n=c(16250000,16162791))
 > prop.test(x=c(695000,855000), n=c(16162791,17812500), alternative = "less")
 
-Bibliography: 
+# Bibliography: 
 
 Brigid Francis Devine, N. F. M. W., 2021. Women and the Economy , London : House of Commons Library .
 Code of Practise for Statistics, 2021. Code of Practise for Statistics. [Online] 
