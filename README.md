@@ -90,6 +90,7 @@ Code for Graphical summaries:
 
 Female and Male Unemployment rate (age 16 and over, seasonally adjusted) from 1971 to 2020: 
 
+```{r} 
 > plot(female_unemployed$year, female_unemployed$rate, type = "o", bty="L", col="deeppink", pch=16, lty=1, ylim = c(0,13), xaxt="n",yaxt="n", ann = "FALSE")
 > title(main = "Female and Male Unemployment Rate (age 16 and over, seasonally adjusted)",col.main="cadetblue4", font.main = 2, xlab = "Year", ylab = "Unemployment Rate (%)", col.lab="cadetblue4",cex.axis=2)
 > axis(1,at=c(1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020),las=2,col.ticks = "cadetblue4", col.axis="ivory4",cex.axis=0.8)
@@ -97,7 +98,8 @@ Female and Male Unemployment rate (age 16 and over, seasonally adjusted) from 19
 > lines(unemployment_addtional_data$Year,unemployment_addtional_data$Rate,type = "o", pch=1,lty=2,col="blue")
 
 > legend("topright",inset = 0.02,c("Female Unemployment Rate (%)", "Male Unemployment Rate (%)"),cex=0.7,box.lty=2,box.lwd=2,box.col = "cadetblue3", bg=rgb(0.33,0.53,0.55,alpha = 0.05),title = "Gender", title.adj = 0.5, lty=c(1,2), pch=c(16,1), col= c("deeppink", "blue"))
-
+```
+```{r} 
 LFS: ILO: UK: Female and Male: Aged 16 and over: Thousands: NSA: 
 
 > plot(female_unemployed$year, female_unemployed$number, type = "o", bty="L", col="deeppink", pch=15, lty=3, ylim = c(0,2000),xlim = c(1984,2020), xaxt="n",yaxt="n", ann = "FALSE")
@@ -106,7 +108,8 @@ LFS: ILO: UK: Female and Male: Aged 16 and over: Thousands: NSA:
 >axis(2,at=c(0,50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1150,1200,1250,1300,1350,1400,1450,1500,1550,1600,1650,1700,1750,1800,1850,1900,1950,2000),las=1, col.ticks = "cadetblue4", col.axis="ivory4", cex.axis=0.8)
 > lines(unemployment_addtional_data$Year,unemployment_addtional_data$Number,type = "o", pch=0, lty=4, col="blue")
 > legend("topright",inset = 0.02,c("Female Unemployment Number (Thousands)", "Male Unemployment Number (Thousands)"),cex=0.7,box.lty=2,box.lwd=2,box.col = "cadetblue3", bg=rgb(0.33,0.53,0.55,alpha = 0.05),title = "Gender", title.adj = 0.5, lty=c(3,4), pch=c(15,0), col= c("deeppink", "blue"))
-
+```
+```{r} 
 Female and Male Unemployment rate (age 16 and over, seasonally adjusted) from 2019 Q1 to 2020 Q4: 
 
 > female <-c(unemployment_addtional_data$`Female Rate`)
@@ -116,9 +119,10 @@ Female and Male Unemployment rate (age 16 and over, seasonally adjusted) from 20
 > axis(2, at=c(0,0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6), col.ticks = "cadetblue4", col.axis="ivory4")
 > title(main ="Female and Male Unemployment Rate from 2019 Q1 to 2020 Q4 (age 16 and over, seasonally adjusted)",col.main= "cadetblue4", font.main=2, xlab="Year and Quarter", ylab= "Unemployment Rate (%)", col.lab= "cadetblue4", cex.axis=2)
 > legend("topleft",inset = 0.02,c("Female Unemployment Rate (%)", "Male Unemployment Rate (%)"),cex=0.9,box.lty=2,box.lwd=2,box.col = "cadetblue3", bg=rgb(0.33,0.53,0.55,alpha = 0.05),title = "Gender", title.adj = 0.5, fill = c("deeppink", "blue")) 
-
+```
 Code for Table 1 and Table 2: 
 
+```{r} 
 > mean(female_unemployed$rate)
 > mean(unemployment_addtional_data$Rate)
 
@@ -136,12 +140,13 @@ Code for Table 1 and Table 2:
 
 > fivenum(unemployment_addtional_data$ `Female Rate`)
 > fivenum(unemployment_addtional_data$ `Male Rate`)
+```
 
 Code for hypothesis tests:
-
+```{r} 
 > prop.test(x=c(585000,695000),n=c(16250000,16162791))
 > prop.test(x=c(695000,855000), n=c(16162791,17812500), alternative = "less")
-
+```
 # Bibliography: 
 
 Brigid Francis Devine, N. F. M. W., 2021. Women and the Economy , London : House of Commons Library .
